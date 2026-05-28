@@ -1,0 +1,28 @@
+name: 📝 贡献内容（案例/自测题/模板）
+description: 分享你工作中的真实案例、设计自测题或完善模板
+title: "[内容]: "
+labels: ["content"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 贡献类型
+      options:
+        - 真实案例（需脱敏）
+        - 自测题
+        - 模板
+        - 场景话术
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 具体内容
+      description: 案例需包含：需求/背景 → 遇到的问题 → PM 处理过程 → 最终结果；自测题需包含：题干、选项、答案和解析。
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: 希望如何署名？
+      description: GitHub ID、网名或「匿名」，我会在网站上标注你的贡献
