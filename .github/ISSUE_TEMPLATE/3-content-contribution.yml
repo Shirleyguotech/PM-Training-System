@@ -1,5 +1,5 @@
 name: 📝 贡献内容（案例/自测题/模板）
-description: 分享你工作中的真实案例、设计自测题或完善模板
+description: 分享脱敏案例、自测题、模板、场景话术或 AI 提示词
 title: "[内容]: "
 labels: ["content"]
 body:
@@ -12,15 +12,52 @@ body:
         - 自测题
         - 模板
         - 场景话术
+        - AI 提示词
+        - 学习建议 / 带教经验
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 适用阶段
+      options:
+        - 售前交接
+        - 项目启动
+        - 规划拆解
+        - 实施推进
+        - 验收交付
+        - 关闭复盘
+        - 跨阶段
     validations:
       required: true
   - type: textarea
     id: content
     attributes:
       label: 具体内容
-      description: 案例需包含：需求/背景 → 遇到的问题 → PM 处理过程 → 最终结果；自测题需包含：题干、选项、答案和解析。
+      description: 案例建议包含：背景、阶段、干系人、冲突点、新人易错点、建议动作。自测题需包含：题干、4 个选项、答案和解析。
+      placeholder: |
+        案例标题：
+        项目背景：
+        当前阶段：
+        当前状态：Green / Yellow / Red
+        主要干系人：
+        冲突点：
+        新人 PM 容易犯的错误：
+        建议 PM 动作：
+        可以产出的文档或话术：
     validations:
       required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 脱敏确认
+      options:
+        - label: 不包含真实客户名称、项目名称或公司敏感信息
+          required: true
+        - label: 不包含合同金额、账号、密码、Token 或内部链接
+          required: true
+        - label: 不包含未脱敏的聊天记录、会议纪要、合同或报价
+          required: true
   - type: input
     id: credit
     attributes:

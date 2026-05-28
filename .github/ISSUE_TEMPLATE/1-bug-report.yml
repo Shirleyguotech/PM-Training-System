@@ -1,5 +1,5 @@
 name: 🐛 报告 Bug
-description: 提交问题或错误反馈
+description: 提交页面、交互或学习进度问题
 title: "[Bug]: "
 labels: ["bug"]
 body:
@@ -7,17 +7,30 @@ body:
     id: description
     attributes:
       label: 问题描述
+      description: 你遇到了什么问题？它影响了哪个学习功能？
+      placeholder: 例如：完成自测题后，学习进度没有刷新。
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
       label: 复现步骤
+      placeholder: |
+        1. 打开页面...
+        2. 选择案例...
+        3. 点击...
+        4. 看到...
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
       label: 预期行为
+      placeholder: 你原本期待页面如何表现？
     validations:
       required: true
+  - type: input
+    id: device
+    attributes:
+      label: 设备和浏览器
+      placeholder: 例如：Windows + Chrome / iPhone + Safari

@@ -1,5 +1,5 @@
 name: ✨ 建议新功能
-description: 提出网站功能改进或新增模块
+description: 提出网站功能、学习路径或产品体验建议
 title: "[功能]: "
 labels: ["enhancement"]
 body:
@@ -7,11 +7,26 @@ body:
     id: feature
     attributes:
       label: 你希望增加什么功能？
+      placeholder: 例如：希望可以导出学习记录，方便新人 PM 发给带教人复盘。
     validations:
       required: true
   - type: textarea
     id: reason
     attributes:
       label: 这个功能解决什么痛点？
+      description: 请尽量说明它如何帮助新人 PM 学习或练习。
     validations:
       required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 相关模块
+      options:
+        - 学习路线图
+        - 练习动作
+        - 阶段门
+        - 自测题
+        - 案例库
+        - 模板 / 话术 / AI 提示词
+        - 移动端体验
+        - 其他

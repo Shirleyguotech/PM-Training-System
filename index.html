@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>新人 PM 30 天训练系统</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="topbar" aria-label="主导航">
+        <a class="brand" href="#top" aria-label="回到首页">
+          <span class="brand-mark">PM</span>
+          <span>PM Training Lab</span>
+        </a>
+        <div class="nav-links">
+          <a href="#daily">今日训练</a>
+          <a href="#stages">阶段通关</a>
+          <button class="nav-button" id="open-learning-roadmap" type="button">学习路线图</button>
+          <button class="nav-button" id="open-reference" type="button">参考</button>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">给软件外包新人 PM 的场景化训练工具</p>
+          <h1>新人 PM 30 天训练系统</h1>
+          <p>
+            在虚拟项目里练习阶段判断、风险识别、干系人沟通和交付闭环。它是训练场，不是正式项目管理系统。
+          </p>
+          <div class="hero-principles" aria-label="网站定位原则">
+            <div>
+              <strong>先学路径</strong>
+              <span>按 6 个项目阶段建立完整交付认知。</span>
+            </div>
+            <div>
+              <strong>再做练习</strong>
+              <span>每天完成 3-5 个具体 PM 训练动作。</span>
+            </div>
+            <div>
+              <strong>最后复盘</strong>
+              <span>用自测题、参考答案和学习总结校准判断。</span>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-button" href="#daily">开始今日训练</a>
+            <button class="secondary-button open-reference-trigger" type="button">打开资料库</button>
+          </div>
+        </div>
+
+        <aside class="quick-panel role-panel" aria-label="主流程">
+          <div class="quick-panel-heading">
+            <p class="eyebrow">学习路径</p>
+            <h2>新人每天只做三件事</h2>
+          </div>
+          <div class="role-links">
+            <a class="role-card primary-role" href="#daily">
+              <span>1</span>
+              <strong>选择练习案例</strong>
+              <small>从典型外包项目进入情境，判断阶段、状态和风险。</small>
+            </a>
+            <a class="role-card" href="#daily-output">
+              <span>2</span>
+              <strong>完成今日训练</strong>
+              <small>按阶段完成 3-5 条 PM 练习动作，留下练习记录。</small>
+            </a>
+            <a class="role-card" href="#stages">
+              <span>3</span>
+              <strong>对照标准答案</strong>
+              <small>做阶段通关检查和自测题，确认自己是否真的掌握。</small>
+            </a>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section public-info-section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">公开说明</p>
+          <h2>这是一个新人 PM 训练场，不是正式项目管理系统</h2>
+        </div>
+        <div class="public-info-grid">
+          <article>
+            <span>适合谁</span>
+            <h3>新人 PM 和带教负责人</h3>
+            <ul>
+              <li>刚进入软件外包行业的新人 PM。</li>
+              <li>从产品、运营、测试、客服转岗做 PM 的新人。</li>
+              <li>需要带教新人 PM 的项目经理或交付负责人。</li>
+              <li>想参考 AI 辅助开发训练工具的人。</li>
+            </ul>
+          </article>
+          <article>
+            <span>不适合谁</span>
+            <h3>正式项目协作团队</h3>
+            <ul>
+              <li>需要多人权限、任务分派、工时统计的团队。</li>
+              <li>希望替代 Jira、飞书、Notion、禅道的团队。</li>
+              <li>需要管理真实客户资料、合同和交付物的场景。</li>
+              <li>需要自动化项目进度预测或风险审计的场景。</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="usage-flow" aria-label="使用流程">
+          <article>
+            <strong>1</strong>
+            <h3>选择案例</h3>
+            <p>从内置外包项目案例进入情境，先看客户、售前、技术和管理层的反应。</p>
+          </article>
+          <article>
+            <strong>2</strong>
+            <h3>完成训练</h3>
+            <p>根据当前阶段和风险状态，完成 3-5 个 PM 练习动作。</p>
+          </article>
+          <article>
+            <strong>3</strong>
+            <h3>对照标准</h3>
+            <p>勾选阶段通关检查，阅读自测题解析，修正自己的判断方式。</p>
+          </article>
+          <article>
+            <strong>4</strong>
+            <h3>生成总结</h3>
+            <p>在资料库生成最近 7 天学习总结，回顾动作、阶段门、自测和进度。</p>
+          </article>
+        </div>
+
+      </section>
+
+      <section class="section" id="daily">
+        <div class="section-heading">
+          <p class="eyebrow">新人 PM 训练</p>
+          <h2>选择练习案例，完成今天的 PM 训练</h2>
+        </div>
+        <section class="learning-progress-panel" id="learning-progress" aria-label="学习进度"></section>
+        <div class="project-board" aria-label="练习案例列表">
+          <div class="project-board-heading">
+            <div>
+              <h3>练习案例列表</h3>
+              <p>优先选择内置案例，它们包含客户、售前、技术和管理层反应，用来模拟真实工作场景。</p>
+            </div>
+            <div class="project-board-actions">
+              <button class="copy-button" id="create-project" type="button">新增自定义案例</button>
+              <button class="copy-button open-reference-trigger" type="button">资料库</button>
+            </div>
+          </div>
+          <div class="project-list" id="project-list"></div>
+        </div>
+        <div class="daily-workbench">
+          <div class="daily-output" id="daily-output" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section stage-panel-section" id="stages">
+        <div class="stage-panel" id="stage-panel" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <p>PM Training Lab · 新人 PM 场景化学习工具</p>
+        <small>数据仅保存在本机浏览器 localStorage 中，不上传；清空缓存或更换浏览器后学习记录可能丢失。</small>
+      </div>
+      <a href="#top">回到顶部</a>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">已复制</div>
+
+    <div class="modal-backdrop" id="learning-roadmap-modal" aria-hidden="true">
+      <div class="modal-dialog learning-roadmap-dialog" role="dialog" aria-modal="true" aria-labelledby="learning-roadmap-title">
+        <button class="modal-close" id="close-learning-roadmap" type="button" aria-label="关闭学习路线图">×</button>
+        <p class="eyebrow">Learning Roadmap</p>
+        <h2 id="learning-roadmap-title">学习路线图</h2>
+        <div class="learning-roadmap-grid">
+          <article class="modal-rule-block">
+            <span>阶段 1 · 售前交接</span>
+            <h3>把销售承诺翻译成可交付边界</h3>
+            <h4>学习目标</h4>
+            <p>读懂合同、报价、售前方案和客户背景，识别范围、时间、成本、资源中的关键假设。</p>
+            <h4>常见陷阱</h4>
+            <p>只听销售口头介绍，没有核对合同条款；忽略“赠送”“顺手做”“后续再说”等隐性承诺。</p>
+            <h4>真实案例简介</h4>
+            <p>客户认为报价包含数据迁移，合同里只写系统搭建。PM 在启动前补做交接确认，避免开发中期才暴露范围争议。</p>
+          </article>
+
+          <article class="modal-rule-block">
+            <span>阶段 2 · 项目启动</span>
+            <h3>让客户和团队对目标、规则和验收达成一致</h3>
+            <h4>学习目标</h4>
+            <p>组织内部启动会和客户 Kickoff，明确目标、角色、沟通节奏、里程碑、验收方式和不包含范围。</p>
+            <h4>常见陷阱</h4>
+            <p>Kickoff 只介绍团队和排期，没有确认决策人、反馈时限、验收标准和客户侧配合事项。</p>
+            <h4>真实案例简介</h4>
+            <p>项目第一周客户反馈慢，PM 用启动会纪要里的反馈时限升级到客户负责人，快速恢复确认节奏。</p>
+          </article>
+
+          <article class="modal-rule-block">
+            <span>阶段 3 · 规划拆解</span>
+            <h3>把目标拆成可执行、可跟踪、可验收的任务</h3>
+            <h4>学习目标</h4>
+            <p>完成 WBS、任务看板、优先级、依赖关系、风险清单和阶段交付物定义。</p>
+            <h4>常见陷阱</h4>
+            <p>只拆功能清单，没有拆确认点、测试点、客户资料依赖和跨角色协作任务。</p>
+            <h4>真实案例简介</h4>
+            <p>一个后台报表项目因权限规则缺失反复返工。PM 在规划阶段增加业务规则确认表，减少后续变更。</p>
+          </article>
+
+          <article class="modal-rule-block">
+            <span>阶段 4 · 实施推进</span>
+            <h3>持续暴露问题，控制范围变更和节奏风险</h3>
+            <h4>学习目标</h4>
+            <p>掌握每日看板检查、周报、会议纪要、风险升级、客户同步和变更评估的标准动作。</p>
+            <h4>常见陷阱</h4>
+            <p>只催进度，不记录阻塞和责任人；客户新增需求直接进入开发，没有做范围和排期影响评估。</p>
+            <h4>真实案例简介</h4>
+            <p>客户临时增加审批流程。PM 先做变更评估并同步影响，把需求放入二期，保住原上线节点。</p>
+          </article>
+
+          <article class="modal-rule-block">
+            <span>阶段 5 · 验收交付</span>
+            <h3>按标准完成交付，而不是按感觉结束项目</h3>
+            <h4>学习目标</h4>
+            <p>组织内部验收、客户 UAT、缺陷分级、交付包准备、验收确认和剩余事项闭环。</p>
+            <h4>常见陷阱</h4>
+            <p>没有明确验收清单就让客户试用；把新增需求、优化建议和关键缺陷混在一起处理。</p>
+            <h4>真实案例简介</h4>
+            <p>客户验收时提出 12 条意见。PM 按缺陷、优化、新需求分类，先关闭关键缺陷，再推动阶段验收确认。</p>
+          </article>
+
+          <article class="modal-rule-block">
+            <span>阶段 6 · 关闭复盘</span>
+            <h3>正式关闭项目，并把经验变成可复用资产</h3>
+            <h4>学习目标</h4>
+            <p>完成关闭确认、资料归档、未结事项说明、内部复盘、模板沉淀和后续支持边界确认。</p>
+            <h4>常见陷阱</h4>
+            <p>客户口头说可以了就停止跟进，没有留下验收、移交、结算和支持边界记录。</p>
+            <h4>真实案例简介</h4>
+            <p>上线后客户继续提小需求。PM 用关闭确认中的支持边界区分免费修复和新需求，避免项目无限期拖尾。</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="reference-backdrop" id="reference-drawer" aria-hidden="true">
+      <aside class="reference-panel" role="dialog" aria-modal="true" aria-labelledby="reference-title">
+        <button class="modal-close" id="close-reference" type="button" aria-label="关闭参考资料">×</button>
+        <div class="reference-content">
+          <div class="reference-header">
+            <p class="eyebrow">资料库</p>
+            <h2 id="reference-title">模板、话术、案例和标准答案</h2>
+            <p>练习时需要查标准、看答案、写模板或模拟客户沟通，可以从这里复制和对照。</p>
+          </div>
+
+          <section class="reference-section">
+            <h3>学习总结生成器</h3>
+            <p>汇总最近 7 天的练习动作和阶段学习进度，生成可复制的学习总结。</p>
+            <button class="copy-button" id="generate-weekly-report" type="button">生成学习总结</button>
+          </section>
+
+          <section class="reference-section">
+            <h3>常用模板</h3>
+            <div class="reference-copy-grid">
+              <button class="copy-button" data-copy-target="handoff-template" type="button">售前交接确认表</button>
+              <button class="copy-button" data-copy-target="charter-template" type="button">项目章程</button>
+              <button class="copy-button" data-copy-target="milestone-template" type="button">项目计划 / 里程碑表</button>
+              <button class="copy-button" data-copy-target="scope-template" type="button">需求与范围确认表</button>
+              <button class="copy-button" data-copy-target="weekly-template" type="button">每周项目周报</button>
+              <button class="copy-button" data-copy-target="risk-template" type="button">风险与问题日志</button>
+              <button class="copy-button" data-copy-target="change-template" type="button">变更请求记录</button>
+              <button class="copy-button" data-copy-target="acceptance-template" type="button">验收与关闭清单</button>
+            </div>
+          </section>
+
+          <section class="reference-section">
+            <h3>AI 提示词</h3>
+            <div class="reference-copy-grid">
+              <button class="copy-button" data-copy-target="meeting-prompt" type="button">会议纪要与行动项</button>
+              <button class="copy-button" data-copy-target="task-prompt" type="button">需求拆解为任务</button>
+              <button class="copy-button" data-copy-target="clarify-prompt" type="button">需求澄清问题生成</button>
+              <button class="copy-button" data-copy-target="plan-prompt" type="button">项目计划 / 里程碑生成</button>
+              <button class="copy-button" data-copy-target="weekly-prompt" type="button">每周项目周报生成</button>
+              <button class="copy-button" data-copy-target="risk-prompt" type="button">项目风险识别</button>
+              <button class="copy-button" data-copy-target="client-message-prompt" type="button">客户沟通消息生成</button>
+              <button class="copy-button" data-copy-target="retro-prompt" type="button">项目复盘总结</button>
+            </div>
+          </section>
+
+          <section class="reference-section">
+            <h3>新人 PM</h3>
+            <div class="reference-grid">
+              <article>
+                <h4>新人常见错误</h4>
+                <ul>
+                  <li>没看合同、报价和售前记录就约客户 Kickoff。</li>
+                  <li>只确认“要做什么”，没有确认“不做什么”。</li>
+                  <li>客户口头确认后没有留下文字记录。</li>
+                  <li>新增需求没有评估影响，直接交给开发。</li>
+                  <li>周报只写进度，不写风险和待确认事项。</li>
+                  <li>没有验收标准就进入开发或交付。</li>
+                </ul>
+              </article>
+              <article>
+                <h4>最低产出物</h4>
+                <ul>
+                  <li>售前交接确认表：确认销售承诺和交付边界。</li>
+                  <li>待确认问题清单：列出客户、售前、技术必须补充的问题。</li>
+                  <li>项目章程：明确目标、范围、不包含范围、角色和验收方式。</li>
+                  <li>里程碑计划：明确阶段、时间、交付物和客户确认点。</li>
+                  <li>风险与问题日志：记录风险、负责人、措施和是否升级。</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="reference-section">
+            <h3>场景处理库</h3>
+            <div class="reference-copy-grid">
+              <button class="copy-button" data-copy-target="scenario-client-no-reply" type="button">客户不回复</button>
+              <button class="copy-button" data-copy-target="scenario-scope-change" type="button">客户临时加需求</button>
+              <button class="copy-button" data-copy-target="scenario-delay" type="button">开发延期</button>
+              <button class="copy-button" data-copy-target="scenario-acceptance-blocked" type="button">客户不验收</button>
+            </div>
+          </section>
+
+          <section class="reference-section">
+            <h3>案例库</h3>
+            <div class="case-library">
+              <details class="case-item">
+                <summary>脱敏案例 1：电商 App 首期交付范围确认</summary>
+                <div class="case-body">
+                  <h4>客户需求</h4>
+                  <p>客户希望在首期完成商品浏览、购物车、下单支付和后台订单管理，并口头提到优惠券、积分和历史订单导入。</p>
+                  <h4>遇到的问题</h4>
+                  <p>合同只写“核心交易闭环”，没有明确优惠券、积分、第三方库存同步和历史数据迁移是否包含在首期。</p>
+                  <h4>PM 处理过程</h4>
+                  <p>PM 梳理合同、报价和原型，先列出范围疑点，再组织售前、技术和客户共同确认本期边界，并形成书面记录。</p>
+                  <h4>最终结果</h4>
+                  <p>首期范围收敛为核心交易闭环，营销能力和数据迁移进入二期评估，项目按原里程碑启动。</p>
+                </div>
+              </details>
+
+              <details class="case-item">
+                <summary>脱敏案例 2：企业官网改版中途新增需求</summary>
+                <div class="case-body">
+                  <h4>客户需求</h4>
+                  <p>客户需要完成官网首页、产品页、案例页和线索表单改版，并要求在行业展会前上线。</p>
+                  <h4>遇到的问题</h4>
+                  <p>设计确认后客户临时提出新增多语言和会员下载专区，技术评估后发现会影响开发、测试和内容录入排期。</p>
+                  <h4>PM 处理过程</h4>
+                  <p>PM 先记录变更请求，组织技术评估影响，再向客户同步对时间、成本和验收范围的影响。</p>
+                  <h4>最终结果</h4>
+                  <p>客户确认首期只上线展会必需页面，多语言和会员专区拆分为后续版本，原上线节点保住。</p>
+                </div>
+              </details>
+
+              <details class="case-item">
+                <summary>脱敏案例 3：内部系统 UAT 验收卡住</summary>
+                <div class="case-body">
+                  <h4>客户需求</h4>
+                  <p>客户需要上线内部审批系统，覆盖请假、报销、采购三类流程，并希望月底前完成试运行。</p>
+                  <h4>遇到的问题</h4>
+                  <p>UAT 阶段客户把流程优化建议、真实缺陷和新增报表需求混在一起反馈，导致验收迟迟无法关闭。</p>
+                  <h4>PM 处理过程</h4>
+                  <p>PM 将反馈按缺陷、优化、新需求分类，逐条标记责任人、优先级、是否影响本期验收和预计处理方式。</p>
+                  <h4>最终结果</h4>
+                  <p>关键缺陷修复后完成阶段验收，优化建议和新增报表进入后续迭代清单。</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section class="reference-section">
+            <h3>项目分级</h3>
+            <div class="reference-grid three">
+              <article>
+                <h4>S 轻量项目</h4>
+                <p>1-2 周，范围清楚，交付物简单。保留售前交接、简版计划、关键节点同步、验收清单。</p>
+              </article>
+              <article>
+                <h4>M 标准项目</h4>
+                <p>2-8 周，有设计、开发、测试和客户确认。使用项目章程、里程碑、周报、风险日志、变更和验收记录。</p>
+              </article>
+              <article>
+                <h4>L 复杂项目</h4>
+                <p>超过 2 个月，多团队或高风险交付。增加完整 WBS、责任矩阵、资源计划、管理层评审和严格变更控制。</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="reference-section">
+            <h3>周期检查清单</h3>
+            <div class="reference-grid three">
+              <article>
+                <h4>每周检查</h4>
+                <ul>
+                  <li>本周实际完成是否匹配原计划？</li>
+                  <li>下周关键任务和里程碑是什么？</li>
+                  <li>风险与问题日志是否更新？</li>
+                  <li>哪些事项需要客户或管理层决策？</li>
+                </ul>
+              </article>
+              <article>
+                <h4>阶段检查</h4>
+                <ul>
+                  <li>当前阶段交付物是否已经完成？</li>
+                  <li>客户确认点是否已经记录？</li>
+                  <li>未关闭风险是否影响下一阶段？</li>
+                  <li>团队是否认可下一阶段计划可执行？</li>
+                </ul>
+              </article>
+              <article>
+                <h4>管理层检查</h4>
+                <ul>
+                  <li>是否有 Yellow / Red 项目需要支持？</li>
+                  <li>是否有客户关系、回款或范围失控风险？</li>
+                  <li>是否有资源冲突影响多个项目？</li>
+                  <li>是否有新人 PM 需要辅导的关键动作？</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="reference-section">
+            <h3>阶段判断规则</h3>
+            <div class="reference-rule-list" id="reference-stage-rules"></div>
+          </section>
+
+          <section class="reference-section">
+            <h3>自测题参考答案与解析</h3>
+            <div class="reference-rule-list" id="reference-self-tests"></div>
+          </section>
+
+          <section class="reference-section">
+            <h3>状态判断规则</h3>
+            <div class="reference-rule-list" id="reference-status-rules"></div>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <div class="modal-backdrop" id="weekly-report-modal" aria-hidden="true">
+      <div class="modal-dialog weekly-report-dialog" role="dialog" aria-modal="true" aria-labelledby="weekly-report-title">
+        <button class="modal-close" id="close-weekly-report" type="button" aria-label="关闭学习总结">×</button>
+        <p class="eyebrow">Learning Summary</p>
+        <h2 id="weekly-report-title">本周学习总结</h2>
+        <pre class="weekly-report-output" id="weekly-report-output"></pre>
+        <button class="copy-button" id="copy-weekly-report" type="button">复制文本</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
