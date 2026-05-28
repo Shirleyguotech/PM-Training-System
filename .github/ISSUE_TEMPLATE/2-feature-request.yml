@@ -1,0 +1,17 @@
+name: ✨ 建议新功能
+description: 提出网站功能改进或新增模块
+title: "[功能]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: 你希望增加什么功能？
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 这个功能解决什么痛点？
+    validations:
+      required: true
